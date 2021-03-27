@@ -1,0 +1,9 @@
+<launch>
+  <node
+    name="Hub"
+    pkg="smart_home_hub"
+    type="SmartHomeHubRunner"
+	output="screen"
+	required="true"/>
+</launch>
+

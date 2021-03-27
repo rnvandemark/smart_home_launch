@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find smart_home_launch)/launch/gui.launch" />
+  <include file="$(find smart_home_launch)/launch/color_peaks.launch" />
+</launch>
