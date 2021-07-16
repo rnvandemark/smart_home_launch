@@ -1,0 +1,25 @@
+<launch>
+  <arg name="sf_root_dir" default="$(env HOME)" />
+  <arg name="max_num_freqs" default="4" />
+  <arg name="init_fft_window" default="0.1" />
+  <arg name="sound_file_path_sub_topic" default="/smart_home/sound_file_path" />
+  <arg name="sound_file_path_list_sub_topic" default="/smart_home/sound_file_path_list" />
+  <arg name="fft_window_sub_topic" default="/smart_home/fft_window" />
+  <arg name="playback_command_sub_topic" default="/smart_home/playback_commands" />
+  <arg name="playback_frequencies_pub_topic" default="/smart_home/playback_frequencies" />
+
+  <node
+    name="SfAnalyzer"
+    pkg="smart_home_analg"
+    type="SfAnalyzer"
+    output="screen"
+    required="true"
+    args="$(arg sf_root_dir)
+          $(arg max_num_freqs)
+          $(arg init_fft_window)
+          $(arg sound_file_path_sub_topic)
+          $(arg sound_file_path_list_sub_topic)
+          $(arg fft_window_sub_topic)
+          $(arg playback_command_sub_topic)
+          $(arg playback_frequencies_pub_topic)"/>
+</launch>
