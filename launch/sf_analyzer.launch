@@ -7,6 +7,7 @@
   <arg name="fft_window_sub_topic" default="/smart_home/fft_window" />
   <arg name="playback_command_sub_topic" default="/smart_home/playback_commands" />
   <arg name="playback_frequencies_pub_topic" default="/smart_home/playback_frequencies" />
+  <arg name="playback_updates_pub_topic" default="/smart_home/playback_updates" />
 
   <node
     name="SfAnalyzer"
@@ -21,5 +22,6 @@
           $(arg sound_file_path_list_sub_topic)
           $(arg fft_window_sub_topic)
           $(arg playback_command_sub_topic)
-          $(arg playback_frequencies_pub_topic)"/>
+          $(arg playback_frequencies_pub_topic)
+          $(arg playback_updates_pub_topic)"/>
 </launch>
